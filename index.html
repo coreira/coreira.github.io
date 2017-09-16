@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>Giới thiệu</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine&effect=vintage|fire-animation">
+        <link rel = "stylesheet" href ="style.scss">
+        <link href='https://fonts.googleapis.com/css?family=Black+Ops+One|Luckiest+Guy|Sonsie+One|Shojumaru&effect=3d|3d-float|anaglyph|brick-sign|canvas-print|
+            crackle|decaying|destruction|distressed|distressed-wood|emboss|fire|fire-animation|fragile|grass|ice|mitosis|neon|outline|putting-green|
+            scuffed-steel|shadow-multiple|splintered|static|stonewash|vintage|wallpaper' 
+            rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript">
+			var gmap = new google.maps.LatLng(10.745344, 106.711825);
+			var marker;
+			function initialize()
+			{
+    			var mapProp = {
+        		center:new google.maps.LatLng(10.745344, 106.711825),
+         		zoom:16,
+        		mapTypeId:google.maps.MapTypeId.ROADMAP
+    		};
+    		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		  	var styles = [
+		    {
+		      featureType: 'road.arterial',
+		      elementType: 'all',
+		      stylers: [
+		        { hue: '#fff' },
+		        { saturation: 100 },
+		        { lightness: -48 },
+		        { visibility: 'on' }
+		      ]
+		    },{
+		      featureType: 'road',
+		      elementType: 'all',
+		      stylers: [
+		 
+		      ]
+		    },
+		    {
+		        featureType: 'water',
+		        elementType: 'geometry.fill',
+		        stylers: [
+		            { color: '#adc9b8' }
+		        ]
+		    },{
+		        featureType: 'landscape.natural',
+		        elementType: 'all',
+		        stylers: [
+		            { hue: '#809f80' },
+		            { lightness: -35 }
+		        ]
+		    }
+			];
+  			var styledMapType = new google.maps.StyledMapType(styles);
+  			map.mapTypes.set('Styled', styledMapType);
+ 
+ 			marker = new google.maps.Marker({map:map,draggable:true,animation: google.maps.Animation.DROP, position: gmap
+ 			});
+  			google.maps.event.addListener(marker, 'click', toggleBounce);
+		}
+ 
+		function toggleBounce() {		 
+		  if (marker.getAnimation() !== null) {
+		    marker.setAnimation(null);
+		  } else {
+		    marker.setAnimation(google.maps.Animation.BOUNCE);
+		  }
+		}
+ 
+google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+    </head>
+  	<body background ="Image\BlueSky.jpg">
+  		<div>
+  			<div id="part1" class ="jumbotron">
+				<div class ="row">
+					<div class="col-md-4">
+						<img id="Picture" src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.0-9/13726798_799364143532744_7120159501361067223_n.jpg?oh=ef733bf9b65033a29526c0a7c2c7cc21&oe=5A17684B">
+					</div>
+					<div class="col-md-8">
+						<h1 class="font-effect-fire-animation 3d">Giới thiệu</h1><video autoplay>
+  											<source src="SaxGuy.mp4" type="video/mp4">
+  											<source src="movie.ogg" type="video/ogg">
+  										</video>
+					</div>
+				</div>
+        	</div>        	
+        	<div id="part2">
+				<h2 class="font-effect-3d" style="font-size:50px; font-family:Luckiest Guy">Thông tin chi tiết : </h2>
+				<hr></hr>
+				<h3 class="font-effect-3d" style="font-size:30px; font-family:Shojumaru">Họ và tên: Võ Văn Bình Minh<br>MSSV: 1560340<br>Lớp: 15CK3</h3><br>
+        	</div>
+        	<div id="part3">
+				<div class="row">
+					<div class="col-md-6" >
+						<p class="font-effect-3d-float" style="font-size:30px; font-family:Black Ops One;"" ><br>Địa chỉ: Nhà
+Số 6E, Đường 33, Phường Tân Kiểng, Quận 7, Hồ Chí Minh, Việt Nam</p>
+					</div>
+					<div class="col-md-6" align="right">
+						<div id="googleMap" style="width:400px; height: 400px;">Google Map</div>
+					</div>
+				</div>
+        	</div>
+        	<div id ="footer">
+        		<h4 align="center">Make by Minh© 2017. All Rights Reversed</h4>
+        	</div>     	
+  		</div>
+    </body>
+</html>
