@@ -11,69 +11,7 @@
         <link href='https://fonts.googleapis.com/css?family=Black+Ops+One|Luckiest+Guy|Sonsie+One|Shojumaru&effect=3d|3d-float|anaglyph|brick-sign|canvas-print|
             crackle|decaying|destruction|distressed|distressed-wood|emboss|fire|fire-animation|fragile|grass|ice|mitosis|neon|outline|putting-green|
             scuffed-steel|shadow-multiple|splintered|static|stonewash|vintage|wallpaper' 
-            rel='stylesheet' type='text/css'>
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-		<script type="text/javascript">
-			var gmap = new google.maps.LatLng(10.745344, 106.711825);
-			var marker;
-			function initialize()
-			{
-    			var mapProp = {
-        		center:new google.maps.LatLng(10.745344, 106.711825),
-         		zoom:16,
-        		mapTypeId:google.maps.MapTypeId.ROADMAP
-    		};
-    		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		  	var styles = [
-		    {
-		      featureType: 'road.arterial',
-		      elementType: 'all',
-		      stylers: [
-		        { hue: '#fff' },
-		        { saturation: 100 },
-		        { lightness: -48 },
-		        { visibility: 'on' }
-		      ]
-		    },{
-		      featureType: 'road',
-		      elementType: 'all',
-		      stylers: [
-		 
-		      ]
-		    },
-		    {
-		        featureType: 'water',
-		        elementType: 'geometry.fill',
-		        stylers: [
-		            { color: '#adc9b8' }
-		        ]
-		    },{
-		        featureType: 'landscape.natural',
-		        elementType: 'all',
-		        stylers: [
-		            { hue: '#809f80' },
-		            { lightness: -35 }
-		        ]
-		    }
-			];
-  			var styledMapType = new google.maps.StyledMapType(styles);
-  			map.mapTypes.set('Styled', styledMapType);
- 
- 			marker = new google.maps.Marker({map:map,draggable:true,animation: google.maps.Animation.DROP, position: gmap
- 			});
-  			google.maps.event.addListener(marker, 'click', toggleBounce);
-		}
- 
-		function toggleBounce() {		 
-		  if (marker.getAnimation() !== null) {
-		    marker.setAnimation(null);
-		  } else {
-		    marker.setAnimation(google.maps.Animation.BOUNCE);
-		  }
-		}
- 
-google.maps.event.addDomListener(window, 'load', initialize);
-		</script>
+            rel='stylesheet' type='text/css'>		
     </head>
   	<body background ="Image\BlueSky.jpg">
   		<div>
@@ -102,7 +40,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 Số 6E, Đường 33, Phường Tân Kiểng, Quận 7, Hồ Chí Minh, Việt Nam</p>
 					</div>
 					<div class="col-md-6" align="right">
-						<div id="googleMap" style="width:400px; height: 400px;">Google Map</div>
+						<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:400px;width:400px;'><div id='gmap_canvas' style='height:400px;width:400px;'></div><div><small><a href="http://embedgooglemaps.com">Click here to generate your map!</a></small></div><div><small><a href=""></a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(10.745108104247388,106.71430063229376),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(10.745108104247388,106.71430063229376)});infowindow = new google.maps.InfoWindow({content:'<strong>Nhà</strong><br>Số 6E, Đường 33, Phường Tân Kiểng, Quận 7, Hồ Chí Minh<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 					</div>
 				</div>
         	</div>
